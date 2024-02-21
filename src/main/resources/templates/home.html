@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empower Your Experience with Our User Management System</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyOoC5E8S9FZI1cBBb1" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: Times New Roman, Times, serif;
+            background-color: #ffe0b2; /* Light orange background */
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            color: #333; /* Dark text color */
+        }
+
+        h1 {
+            color: #2196F3; /* Blue heading color */
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #555; /* Dark gray text color */
+            margin-top: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px; /* Reduced margin */
+        }
+
+        .action-button {
+            padding: 15px 30px;
+            font-size: 19px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 25px; /* Rounded edges */
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .signin-button {
+            background-color: #FF4081; /* Pink */
+            color: #fff;
+            border: 2px solid #FF4081; /* Matching border color */
+        }
+
+        .login-button {
+            background-color: #4CAF50; /* Green */
+            color: #fff;
+            border: 2px solid #4CAF50; /* Matching border color */
+        }
+
+        .action-button:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+
+        /* Additional styles to hide unwanted links */
+        .navbar-nav .nav-link:not(.signin-button, .login-button) {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <!-- Empty Navbar -->
+        </ul>
+    </div>
+</nav>
+
+<h1>Welcome To Home Page !!!</h1>
+
+<!-- Welcome Message -->
+<p><h2>Empower Your Experience with Our User Management System</h2></p>
+
+<p>
+    Unleash the potential of user management with our robust and secure platform.
+    Whether you're signing in or logging in, we ensure a seamless experience!
+</p>
+
+<!-- Move the button container below the paragraph -->
+<div class="button-container">
+    <a href="signin" class="action-button signin-button" onclick="redirectToHome()">Sign In With Us</a>
+    <a href="login" class="action-button login-button">Log In Your Account</a>
+</div>
+
+<!-- Link to Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMN6LfeVzhgGkaW0MZs1s8WPnbBMpHjL1U7Tg3xQhqphB1+r8bZd8kRE5xHpnVJX" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyOoC5E8S9FZI1cBBb1" crossorigin="anonymous"></script>
+
+<script>
+    function redirectToHome() {
+        window.location.href = "home.html";
+    }
+</script>
+
+</body>
+</html>

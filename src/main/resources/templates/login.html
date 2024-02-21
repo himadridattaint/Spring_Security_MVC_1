@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Authentication - Log In</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #66bb6a; /* Change to desired green color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            text-align: center;
+            margin: 20px;
+            background-color: #2196F3; /* Change to desired color */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        .login-form {
+            width: 300px;
+            border-radius: 4px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #ffffff; /* Change to desired text color */
+        }
+
+        label {
+            color: #555;
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .field1 {
+            background-color: #FFECB3; /* Light pink */
+        }
+
+        .field2 {
+            background-color: #C8E6C9; /* Light green */
+        }
+
+        input[type="checkbox"] {
+            margin-top: 10px;
+        }
+
+        .login-submit {
+            padding: 12px 20px; /* Adjusted padding */
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px; /* Rounded shape */
+            width: 50%;
+            background-color: #FF5722; /* Change to desired color */
+            color: white;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-submit:hover {
+            background-color: #E64A19; /* Change to desired hover color */
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .forgot-password {
+            color: #ffffff; /* Change to desired text color */
+            text-decoration: underline;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h1>User Log In</h1>
+    <form th:action="@{/api/login}" th:method="post" class="login-form">
+        <label for="email">Enter Your Registered Email Id:</label><br>
+        <input type="email" id="email" name="email" class="field1" required><br>
+        <label for="password">Enter Your Password:</label>
+        <input type="password" id="password" name="password" class="field2" required><br>
+        <input type="checkbox" onclick="togglePasswordVisibility('password')"> Show Password<br>
+        <p class="forgot-password" onclick="forgotPassword()">Forgot Password ?</p>
+        <input type="submit" class="login-submit" value="Log In">
+    </form>
+</div>
+
+<script>
+    function togglePasswordVisibility(inputId) {
+        var passwordInput = document.getElementById(inputId);
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
+        }
+    }
+
+    function forgotPassword() {
+        alert("Forgot Password functionality goes here.");
+    }
+</script>
+</body>
+</html>
